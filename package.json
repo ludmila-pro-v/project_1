@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/ludmila-pro-v/lesson_15#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
