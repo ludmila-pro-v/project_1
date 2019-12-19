@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 
 // Static server
 function bs() {
-  serveSass()
+  serveSass();
   browserSync.init({
     server: {
       baseDir: "./"
@@ -18,9 +18,9 @@ function bs() {
 
 // Compile sass into CSS & auto-inject into browsers
 function serveSass() {
-  return src("app/scss/*.scss")
+  return src("./sass/*.sass")
       .pipe(sass())
-      .pipe(dest("app/css"))
+      .pipe(dest("./css"))
       .pipe(browserSync.stream());
 };
 
