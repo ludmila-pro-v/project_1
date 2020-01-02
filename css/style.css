@@ -318,7 +318,7 @@ template {
   text-transform: uppercase;
   font-size: 0.93rem; }
   .button:hover {
-    cursor: pointer; }
+    cursor: pointer !important; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff;
@@ -505,7 +505,8 @@ img {
   .hero__content {
     position: relative;
     max-width: 47.85rem;
-    margin-left: 4.28rem; }
+    margin-left: 4.28rem;
+    z-index: 9; }
   .hero__button {
     margin-right: 18px;
     padding: 20px 25px;
@@ -606,8 +607,9 @@ img {
       margin-bottom: 0.85rem; }
 
 .modal {
+  opacity: 0;
+  visability: hidden;
   position: fixed;
-  z-index: 199;
   left: 0;
   right: 0;
   top: 0;
@@ -618,6 +620,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 100%;
+    visability: visible;
+    z-index: 199; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
