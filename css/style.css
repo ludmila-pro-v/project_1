@@ -371,6 +371,17 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-50 {
+  width: 50%; }
+
+.col-30 {
+  flex-basis: 32%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -388,10 +399,24 @@ img {
   padding: 60px 0; }
   .section-title {
     text-align: center; }
+    .section-title--left {
+      text-align: left; }
     .section-title__heading {
       text-transform: uppercase;
       font-family: "Yeseva One", cursive;
-      font-weight: normal; }
+      font-weight: normal;
+      line-height: 138.6%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        background-color: #E3B873;
+        margin-left: 2rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -408,6 +433,13 @@ img {
       font-size: 1.25rem;
       line-height: 143%;
       max-width: 21.86rem; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
+  .section--dark {
+    background-color: #131313;
+    color: #ffffff; }
 
 .card__text {
   position: relative;
@@ -502,6 +534,15 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     max-width: 47.85rem;
@@ -529,15 +570,16 @@ img {
     align-items: center;
     justify-content: center;
     left: 0;
-    bottom: -8.5%;
+    bottom: 0;
     min-width: 17.6rem;
-    min-height: 6.93rem;
+    min-height: 6.92rem;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
     font-family: 'Yeseva One', cursive;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    z-index: 9; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -545,7 +587,8 @@ img {
       height: 30px;
       border: 1px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 12px;
+      z-index: 10; }
 
 .instagram {
   display: flex;
@@ -586,14 +629,6 @@ img {
 .types__card--text {
   margin-top: -9.2rem;
   margin-bottom: 0.85rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .design {
   background-color: #131313; }
@@ -659,6 +694,49 @@ img {
   .modal__button {
     align-self: flex-end; }
 
+.swiper-wrapper {
+  margin-bottom: 3.27rem; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 2.42rem; }
+  .swiper-slide__heading {
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    color: #E3B873;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 0.64rem; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  background: url("../img/arrow-prev.svg") no-repeat center;
+  left: 0; }
+
+.swiper-button-next {
+  background: url("../img/arrow-next.svg") no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: 0; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -680,7 +758,20 @@ img {
   .types__card {
     margin-bottom: 5.64rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .col-50 {
+    width: 100%; }
+  .section-title__word {
+    display: block;
+    margin-bottom: 1.57rem; }
+    .section-title__word::after {
+      display: none; }
+  .section-title--left {
+    text-align: center; }
+  .section-title__text {
+    max-width: 100%; }
+  .section-title__image {
+    display: none; } }
 
 @media screen and (min-width: 760px) {
   .design {
@@ -693,7 +784,9 @@ img {
     flex-direction: row;
     justify-content: space-between; }
   .card {
-    flex-basis: 32%; } }
+    flex-basis: 32%; }
+  .section-title__miniimage {
+    display: none; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
