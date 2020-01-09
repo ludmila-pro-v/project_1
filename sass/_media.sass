@@ -13,6 +13,8 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 760px )
+  img
+    margin-top: 2.57rem
   .row
     flex-direction: column
     align-items: center
@@ -36,8 +38,16 @@
         text-align: center
       &__text
         max-width: 100%
-      &__image
-        display: none
+  .swiper
+    // &-button
+    //   &-next
+    //     margin-left: auto
+    //     margin-right: 0
+    // &-pagination
+    //   position: static
+  //   position: relative
+      // &__image
+      //   display: none
 @media screen and ( min-width: 760px )
   .design
     background-color: $light
@@ -52,10 +62,10 @@
     justify-content: space-between
   .card
     flex-basis: 32%
-  .section
-    &-title
-      &__miniimage
-        display: none
+  // .section
+  //   &-title
+  //     &__miniimage
+  //       display: none
 @media screen and ( max-width:  570px)
   .contacts
     &__phone

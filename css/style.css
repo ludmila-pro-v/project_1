@@ -643,7 +643,7 @@ img {
 
 .modal {
   opacity: 0;
-  visability: hidden;
+  visibility: hidden;
   position: fixed;
   left: 0;
   right: 0;
@@ -657,7 +657,7 @@ img {
   justify-content: center; }
   .modal--visible {
     opacity: 100%;
-    visability: visible;
+    visibility: visible;
     z-index: 199; }
   .modal__dialog {
     position: relative;
@@ -752,6 +752,8 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 760px) {
+  img {
+    margin-top: 2.57rem; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -769,9 +771,7 @@ img {
   .section-title--left {
     text-align: center; }
   .section-title__text {
-    max-width: 100%; }
-  .section-title__image {
-    display: none; } }
+    max-width: 100%; } }
 
 @media screen and (min-width: 760px) {
   .design {
@@ -784,9 +784,7 @@ img {
     flex-direction: row;
     justify-content: space-between; }
   .card {
-    flex-basis: 32%; }
-  .section-title__miniimage {
-    display: none; } }
+    flex-basis: 32%; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
