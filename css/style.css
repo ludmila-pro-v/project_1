@@ -771,7 +771,9 @@ img {
   .section-title--left {
     text-align: center; }
   .section-title__text {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .swiper__image {
+    display: none; } }
 
 @media screen and (min-width: 760px) {
   .design {
@@ -784,7 +786,9 @@ img {
     flex-direction: row;
     justify-content: space-between; }
   .card {
-    flex-basis: 32%; } }
+    flex-basis: 32%; }
+  .swiper__miniimage {
+    display: none; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
